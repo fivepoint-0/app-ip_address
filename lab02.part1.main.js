@@ -117,14 +117,7 @@ function main() {
       if (error) {
         console.error(`  Error returned from GET request: ${error}`);
       }
-    
-      let ipv6 = null
-
-      try {
-          ipv6 = getIpv4MappedIpv6Address(data)     
-      } catch (err) {}
-        
-      console.log(`  Response returned from GET request: ${JSON.stringify({ipv4:data,ipv6: ipv6})}`);
+      console.log(`  Response returned from GET request: ${data}`);
     });
   }
   // Iterate over sampleIpv4s and pass the element's value to getIpv4MappedIpv6Address().
