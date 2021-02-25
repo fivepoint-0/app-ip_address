@@ -6,7 +6,7 @@
 */
 const IPCIDR = require('ip-cidr')
 const path = require('path')
-
+const ipv6 = require('./ipv6')
 class IpAddress {
     constructor() {
         // IAP's global log object is used to output errors, warnings, and other
