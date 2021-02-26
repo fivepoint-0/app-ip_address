@@ -7,6 +7,7 @@
 const IPCIDR = require('ip-cidr')
 const path = require('path')
 const { getIpv4MappedIpv6Address } = require('./ipv6')
+
 class IpAddress {
     constructor() {
         // IAP's global log object is used to output errors, warnings, and other
@@ -48,6 +49,7 @@ class IpAddress {
         if (!cidr.isValid()) {
             // If the passed CIDR is invalid, set an error message.
             callbackError = 'Error: Invalid CIDR passed to getFirstIpAddress.';
+            log.info(callbackError)
         } else {
             // If the passed CIDR is valid, call the object's toArray() method.
             // Notice the destructering assignment syntax to get the value of the first array's element.
